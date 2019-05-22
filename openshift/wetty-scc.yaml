@@ -17,7 +17,7 @@ metadata:
   annotations:
     kubernetes.io/description: wetty is similar to restricted except that it allows for the container to run
       as a specific UID, 2000.
-  name: wetty
+  name: wetty-custom
 priority: null
 readOnlyRootFilesystem: false
 requiredDropCapabilities:

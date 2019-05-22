@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Template
 labels:
-  template: wetty-openssh
+  template: wetty-openssh-custom
 metadata:
   annotations:
     description: OpenSSH for Web Based Terminal Interface
     iconClass: icon-shadowman
     tags: tty,http
-  name: wetty-openssh
+  name: wetty-openssh-custom
 objects:
 - apiVersion: v1
   kind: ImageStream
@@ -54,7 +54,7 @@ parameters:
   displayName: Wetty OpenSSH git Repo
   name: GITHUB_REPOSITORY_URL
   required: true
-  value: https://github.com/kevensen/wetty-openshift.git
+  value: https://github.com/zapata13/wetty-openshift.git
 - description: The repository reference for the Wetty OpenSSH Dockerfile
   displayName: Wetty OpenSSH Dockerfile Repoistory Branch
   name: REPOSITORY_REF

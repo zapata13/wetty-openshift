@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Template
 labels:
-  template: wetty-ephemeral
+  template: wetty-ephemeral-custom
 metadata:
   annotations:
     description: Web Based Terminal Interface (Ephemeral)
     iconClass: icon-nodejs
     tags: tty,http
   creationTimestamp: null
-  name: wetty-ephemeral
+  name: wetty-ephemeral-custom
 objects:
 - apiVersion: v1
   kind: ImageStream

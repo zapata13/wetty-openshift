@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Template
 labels:
-  template: wetty-persistant
+  template: wetty-persistant-custom
 metadata:
   annotations:
     description: Web Based Terminal Interface (Persistant)
     iconClass: icon-nodejs
     tags: tty,http
   creationTimestamp: null
-  name: wetty-persistant
+  name: wetty-persistant-custom
 objects:
 - apiVersion: v1
   kind: ImageStream
