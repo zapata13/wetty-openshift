@@ -101,7 +101,7 @@ objects:
           image: ' '
           ports:
           - containerPort: 3000
-        - name: openssh
+        - name: openssh-custom
           image: ' '
           ports:
           - containerPort: 22
@@ -117,10 +117,10 @@ objects:
     - imageChangeParams:
         automatic: true
         containerNames:
-        - openssh
+        - openssh-custom
         from:
           kind: ImageStreamTag
-          name: openssh:latest
+          name: openssh-custom:latest
           namespace: ${NAMESPACE}
       type: ImageChange
     - type: ConfigChange

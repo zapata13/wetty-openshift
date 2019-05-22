@@ -14,18 +14,18 @@ objects:
   metadata:
     annotations:
       description: Keeps track of changes in the application image
-    name: openssh
+    name: openssh-custom
 - apiVersion: v1
   kind: BuildConfig
   metadata:
     annotations:
       description: Defines how to build the application
-    name: openssh
+    name: openssh-custom
   spec:
     output:
       to:
         kind: ImageStreamTag
-        name: openssh:latest
+        name: openssh-custom:latest
     source:
       contextDir: ${CONTEXT_DIR}
       git:
