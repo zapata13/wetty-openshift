@@ -16,7 +16,6 @@ RUN dnf install -y --setopt=tsflags=nodocs \
     	npm \
         openssh-server \
 	openssl \
-        origin-clients \
 	screen \
         tree \
         glide \
@@ -32,6 +31,10 @@ RUN mkdir /home/default && \
 RUN /usr/bin/ssh-keygen -A -N '' && \
     chmod -R a+r /etc/ssh/* && \
     /usr/sbin/setcap 'cap_net_bind_service=+ep' /usr/sbin/sshd
+
+RUN curl -L https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz > oc.tar.gz && \
+    tar xvzf oc.tar.gz  && \
+    cp openshift-origin-client-tools-v3.9.0-191fece-linux-64bit/oc /bin/
 
 COPY fedora-profile.sh /etc/profile.d/
 RUN chmod a+r /etc/profile.d/fedora-profile.sh
